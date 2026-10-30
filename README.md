@@ -1,8 +1,9 @@
-# Trivia Night
+ HEAD
+ Trivia Night
 
 Trivia Night is a responsive, real-time multiplayer quiz for up to 12 players per room. Players sign in from their own devices, join with a six-character invite code or link, and answer the same timed questions together. The game runs on PHP and MySQL/MariaDB and uses short polling, so it does not need a separate WebSocket service.
 
-## How to play
+ How to play
 
 1. Create an account and sign in.
 2. One player creates a room and shares its invite link or six-character code.
@@ -13,14 +14,13 @@ Trivia Night is a responsive, real-time multiplayer quiz for up to 12 players pe
 
 New account passwords must be at least 6 characters and include at least one letter and one number.
 
-## Requirements
+ Requirements
 
-- PHP 8.1+ with PDO MySQL enabled
-- MySQL 5.7+ or MariaDB 10.2+
-- Apache or another web server configured to run PHP
-- HTTPS for a public website
-
-## Local setup with XAMPP
+ PHP 8.1+ with PDO MySQL enabled
+ MySQL 5.7+ or MariaDB 10.2+
+ Apache or another web server configured to run PHP
+ HTTPS for a public website
+ Local setup with XAMPP
 
 1. Copy this folder into `C:\xampp\htdocs\Multiplayer_trivia_quiz_game`.
 2. Start Apache and MySQL in the XAMPP Control Panel.
@@ -30,7 +30,7 @@ New account passwords must be at least 6 characters and include at least one let
 6. Visit `http://localhost/Multiplayer_trivia_quiz_game/setup.php`, enter that setup key, and create the first admin account. Setup closes after the first admin account is created.
 7. Sign in, create a room, and use **Admin** to manage the question bank.
 
-## Hosting
+ Hosting
 
 1. Choose a PHP/MySQL host and connect a domain or use the URL supplied by the host. Create a database and database user in the hosting control panel.
 2. Upload the project files to the site's document root (often `public_html`). Enable PHP 8.1+ and PDO MySQL, and turn on HTTPS.
@@ -41,3 +41,7 @@ New account passwords must be at least 6 characters and include at least one let
 7. Visit your site URL, create an account, and invite players. Share the actual public URL from your hosting provider; this project folder by itself is not online.
 
 For production, disable PHP error display and enable server-side error logging. Use a unique admin password and keep database backups. Do not upload a development database or real credentials to a public source repository.
+
+ multiplayer-game-challenge
+A real-time multiplayer game built with ChatGPT Work Mode
+ caf72eca730ebbee9b25b5ced6903b96f2d36729
