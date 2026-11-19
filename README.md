@@ -42,6 +42,12 @@ New account passwords must be at least 6 characters and include at least one let
 
 For production, disable PHP error display and enable server-side error logging. Use a unique admin password and keep database backups. Do not upload a development database or real credentials to a public source repository.
 
+### Vercel
+
+The root `Dockerfile` lets Vercel build this PHP app with FrankenPHP; PHP is not converted into another language. Import the GitHub repository in Vercel and deploy it using the Container preset (Vercel normally detects the `Dockerfile` automatically). Before deploying, create an external MySQL database, import `schema.sql`, and add `TRIVIA_DB_HOST`, `TRIVIA_DB_NAME`, `TRIVIA_DB_USER`, `TRIVIA_DB_PASS`, and a unique `TRIVIA_SETUP_KEY` in the Vercel project's environment variables. Do not rely on the local XAMPP database or the fallback values in `config.php`.
+
+This app currently uses PHP's local file-based sessions. Vercel may run multiple container instances, so reliable sign-in across instances requires changing sessions to use a shared store before production use.
+
  multiplayer-game-challenge
 A real-time multiplayer game built with ChatGPT Work Mode
  caf72eca730ebbee9b25b5ced6903b96f2d36729
